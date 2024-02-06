@@ -1,7 +1,7 @@
 # This is our website for Data Dazzlers script to install docker, traefik/nginx, and BeEF. 
 
 ## --- Docker Instructions---
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done # this unistalls conflicting packages
+    for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done # this unistalls conflicting packages
 
 ### Install docker using apt repository
     sudo apt-get update
