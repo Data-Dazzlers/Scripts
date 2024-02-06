@@ -1,16 +1,16 @@
-# This is our website for Data Dazzlers script to install docker, traefik, and BeEF. 
+# This is our website for Data Dazzlers script to install docker, traefik/nginx, and BeEF. 
 
-#/bin/bash
 --- docker ---
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done # this unistalls conflicting packages
 
 # Install docker using apt repository
 # Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+    <sudo apt-get update>
+    <sudo apt-get install ca-certificates curl>
+    <sudo install -m 0755 -d /etc/apt/keyrings>
+    <sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc>
+    <sudo chmod a+r /etc/apt/keyrings/docker.asc>
 
 # Add the repository to Apt sources:
 echo \
