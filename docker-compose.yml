@@ -10,12 +10,12 @@ services:
       - "8080:8080" # <== :8080 is where the dashboard runs on
       - "443:443" # <== https
     command:
-      - --api.insecure=true --providers.docker # <== Enabling insecure api, NOT RECOMMENDED FOR PRODUCTION
+      - --api.insecure=true --providers.docker # <== Enabling insecure api
       - --api.dashboard=true # <== Enabling the dashboard to view services, middlewares, routers, etc.
       - --api.debug=true # <== Enabling additional endpoints for debugging and profiling
       - --log.level=DEBUG # <== Setting the level of the logs from traefik
       - --providers.docker=true # <== Enabling docker as the provider for traefik
-      - --providers.docker.exposedbydefault=true # <== Don't expose every container to traefik
+      - --providers.docker.exposedbydefault=true # <== Determines what containers are exposed by default
       - --providers.file.filename=/dynamic.yaml # <== Referring to a dynamic configuration file
       - --providers.docker.network=web # <== Operate on the docker network named web
       - --entrypoints.web.address=:80 # <== Defining an entrypoint for port :80 named web
